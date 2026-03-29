@@ -1,0 +1,102 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-responsive-single-page-website-for-the-restaurant-with-a-consistent-red-and-white-visual-theme",
+      "featureTitle": "Create a responsive single-page website for the restaurant with a consistent red-and-white visual theme.",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/App.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-header-section-that-displays-the-restaurant-name-mehfil-limra-paradise-restaurant-and-includes-the-alternate-name-mehfil-mandi-house-e-g-as-a-subtitle-or-secondary-label-add-a-prominent-call-now-button-that-links-to-tel-6305855373",
+      "featureTitle": "Implement a header section that displays the restaurant name “Mehfil Limra Paradise Restaurant” and includes the alternate name “Mehfil Mandi House” (e.g., as a subtitle or secondary label). Add a prominent “Call Now” button that links to tel:6305855373.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/HeaderSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-location-section-that-displays-the-address-text-opp-pillar-no-103-attapur-x-roads-hyderabad",
+      "featureTitle": "Add a Location section that displays the address text: “Opp. Pillar No. 103, Attapur X Roads, Hyderabad”.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/LocationSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-digitize-the-provided-menu-items-into-a-clean-table-or-grid-layout-with-columns-for-item-single-price-and-full-price-use-where-a-single-full-price-is-not-provided-include-placeholders-for-additional-items-not-enumerated-by-the-user-as-stand-in-rows-cards-without-specific-pricing",
+      "featureTitle": "Digitize the provided menu items into a clean table or grid layout with columns for Item, Single price, and Full price. Use “--” where a Single/Full price is not provided. Include placeholders for additional items not enumerated by the user (as stand-in rows/cards without specific pricing).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/MenuSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-generate-and-include-basic-restaurant-branding-imagery-as-static-assets-and-display-them-on-the-page-e-g-logo-badge-and-a-subtle-hero-banner-graphic-while-staying-within-the-red-white-theme",
+      "featureTitle": "Generate and include basic restaurant branding imagery as static assets and display them on the page (e.g., logo badge and a subtle hero/banner graphic) while staying within the red/white theme.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/HeaderSection.tsx",
+        "frontend/src/components/HeroSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.5rem;
+        
+        /* Red and White Theme - Light Mode */
+        --background: 0.99 0 0;
+        --foreground: 0.15 0 0;
+        
+        --card: 1 0 0;
+        --card-foreground: 0.15 0 0;
+        
+        --popover: 1 0 0;
+        --popover-foreground: 0.15 0 0;
+        
+        /* Primary: Rich Red */
+        --primary: 0.50 0.22 25;
+        --primary-foreground: 1 0 0;
+        
+        /* Secondary: Light Gray */
+        --secondary: 0.96 0 0;
+        --secondary-foreground: 0.20 0 0;
+        
+        --muted: 0.96 0 0;
+        --muted-foreground: 0.50 0 0;
+        
+        --accent: 0.97 0 0;
+        --accent-foreground: 0.20 0 0;
+        
+        /* Destructive: Bright Red for badges */
+        --destructive: 0.55 0.24 27;
+        --destructive-foreground: 1 0 0;
+        
+        --border: 0.90 0 0;
+        --input: 0.90 0 0;
+        --ring: 0.50 0.22 25;
+        
+        --chart-1: 0.50 0.22 25;
+        --chart-2: 0.60 0.15 15;
+        --chart-3: 0.70 0.10 35;
+        --chart-4: 0.45 0.20 20;
+        --chart-5: 0.55 0.18 30;
+    }
+
+    .dark {
+        /* Red and White Theme - Dark Mode */
+        --background: 0.15 0 0;
+        --foreground: 0.98 0 0;
+        
+        --card: 0.20 0 0;
+        --card-foreground: 0.98 0 0;
+        
+        --popover: 0.18 0 0;
+        --popover-foreground: 0.98 0 0;
+        
+        /* Primary: Bright Red for dark mode */
+        --primary: 0.60 0.24 25;
+        --primary-foreground: 0.98 0 0;
+        
+        --secondary: 0.25 0 0;
+        --secondary-foreground: 0.98 0 0;
+        
+        --muted: 0.25 0 0;
+        --muted-foreground: 0.65 0 0;
+        
+        --accent: 0.30 0 0;
+        --accent-foreground: 0.98 0 0;
+        
+        --destructive: 0.65 0.22 27;
+        --destructive-foreground: 0.98 0 0;
+        
+        --border: 0.30 0 0;
+        --input: 0.30 0 0;
+        --ring: 0.60 0.24 25;
+        
+        --chart-1: 0.60 0.24 25;
+        --chart-2: 0.70 0.18 15;
+        --chart-3: 0.80 0.12 35;
+        --chart-4: 0.55 0.22 20;
+        --chart-5: 0.65 0.20 30;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-bold;
+    }
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}

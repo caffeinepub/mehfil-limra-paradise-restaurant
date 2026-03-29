@@ -1,0 +1,133 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Mehfil Limra Paradise Restaurant — single-page red/white website with menu",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Implement a responsive single-page layout with a consistent red/white theme using the provided React + TypeScript + Tailwind template.",
+      "acceptanceCriteria": [
+        "Page renders as a single-page layout (no required multi-page navigation)",
+        "Red/white theme is applied consistently across header, sections, and menu presentation",
+        "Layout is responsive and usable on mobile and desktop"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Create global styles and theme tokens (CSS variables) to enforce a consistent red/white palette across the app, compatible with the Tailwind + shadcn/ui token approach (no changes to immutable ui component files)."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the single-page layout wrapper (header + sections) with responsive spacing/typography using Tailwind utilities; ensure all content is on one page without requiring navigation."
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Verify the document title and meta viewport support the single-page restaurant site presentation and remain English-only (no external links added)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Add a header with the restaurant name, alternate name, and a prominent “Call Now” tel link button.",
+      "acceptanceCriteria": [
+        "Header shows primary name exactly as “Mehfil Limra Paradise Restaurant”",
+        "Alternate name “Mehfil Mandi House” is visible in the header area",
+        "“Call Now” button uses a tel: link (tel:6305855373) and is easily clickable on mobile"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HeaderSection.tsx",
+          "operation": "create",
+          "description": "Implement a responsive header section that displays “Mehfil Limra Paradise Restaurant” with “Mehfil Mandi House” as a secondary label, and includes a prominent “Call Now” action linking to tel:6305855373."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire HeaderSection into the single-page layout at the top and ensure the header styling follows the red/white theme."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Add a Location section showing the exact address text provided.",
+      "acceptanceCriteria": [
+        "Location section is present on the page",
+        "Address text matches exactly: “Opp. Pillar No. 103, Attapur X Roads, Hyderabad”"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/LocationSection.tsx",
+          "operation": "create",
+          "description": "Create a Location section component that displays the address exactly as: “Opp. Pillar No. 103, Attapur X Roads, Hyderabad”, styled to match the red/white theme and responsive layout."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire LocationSection into the single-page layout as a dedicated section (no new routes/pages)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Digitize menu items into a readable, responsive table/grid with Item, Single, and Full prices, using “--” where missing and including placeholder entries.",
+      "acceptanceCriteria": [
+        "Menu section displays at least the 9 specified items with the exact prices and “--” where indicated",
+        "Menu shows Single and Full pricing fields/columns for each listed item",
+        "Additional placeholder entries are visible to represent other items not yet digitized",
+        "Menu layout remains readable on mobile (no horizontal overflow for typical phone widths)"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/MenuSection.tsx",
+          "operation": "create",
+          "description": "Create a Menu section that renders the 9 specified items with columns for Item / Single / Full, using “--” when missing; include additional placeholder rows/cards for not-yet-digitized items; implement a mobile-friendly layout (e.g., stacked cards on small screens, table/grid on larger screens) to avoid horizontal overflow."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire MenuSection into the single-page layout and ensure section headings and menu presentation match the red/white theme."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Add generated branding imagery as static assets (logo badge + hero/banner) and display them in the page while maintaining the red/white theme.",
+      "acceptanceCriteria": [
+        "Generated images exist under frontend/public/assets/generated and are referenced by the UI",
+        "At least one logo-like badge image is displayed near the header",
+        "At least one banner/hero-style image is displayed in the top section or as a section header background",
+        "Images visually match a red/white palette and do not introduce unrelated colors as dominant accents"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/mehfil-logo-badge.dim_512x512.png",
+          "operation": "create",
+          "description": "Add the generated static branding asset at frontend/public/assets/generated/mehfil-logo-badge.dim_512x512.png (circular red/white logo badge) so the UI can reference it."
+        },
+        {
+          "path": "frontend/public/assets/generated/mehfil-hero-banner.dim_1600x600.png",
+          "operation": "create",
+          "description": "Add the generated static branding asset at frontend/public/assets/generated/mehfil-hero-banner.dim_1600x600.png (wide red/white hero/banner) so the UI can reference it."
+        },
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "create",
+          "description": "Create a hero/top section that displays the banner image frontend/public/assets/generated/mehfil-hero-banner.dim_1600x600.png and presents a clean red/white overlay/content area for readability."
+        },
+        {
+          "path": "frontend/src/components/HeaderSection.tsx",
+          "operation": "modify",
+          "description": "Display the logo badge image frontend/public/assets/generated/mehfil-logo-badge.dim_512x512.png near the restaurant name within the header, ensuring it remains visually consistent with the red/white theme."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire HeroSection into the top of the single-page layout (above or integrated with the header) so the banner is visible without introducing additional pages/routes."
+        }
+      ]
+    }
+  ]
+}

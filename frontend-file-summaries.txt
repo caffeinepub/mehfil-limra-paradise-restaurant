@@ -1,0 +1,11 @@
+{
+  "frontend/src/App.tsx": "Main application component that composes the single-page restaurant website layout with hero, header, location, menu sections, and footer.",
+  "frontend/src/components/HeroSection.tsx": "Hero section displaying the banner image, restaurant logo, name, alternate name, and prominent call-to-action button with phone number.",
+  "frontend/src/components/HeaderSection.tsx": "Sticky header component showing restaurant branding, logo, names, and action buttons for calling and getting directions.",
+  "frontend/src/components/LocationSection.tsx": "Location section displaying address, contact number, and operating hours in a three-column card layout.",
+  "frontend/src/components/MenuSection.tsx": "Menu section organizing 15 menu items by category (Biryani, Special Packs, Rice & Noodles, Starters) with single/full pricing in responsive cards.",
+  "frontend/src/components/Footer.tsx": "Footer component with restaurant information, contact details, hours, and attribution link to caffeine.ai.",
+  "frontend/src/index.css": "Global styles with OKLCH-based red and white color theme tokens for both light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration with custom font families (Inter, Poppins) and extended theme tokens matching the red/white restaurant aesthetic.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file for React Query hooks (no backend methods to call)."
+}

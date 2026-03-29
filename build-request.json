@@ -1,0 +1,137 @@
+{
+  "kind": "build_request",
+  "title": "Single-page restaurant website for Mehfil Limra Paradise Restaurant (red/white theme + menu)",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a responsive single-page website for the restaurant with a consistent red-and-white visual theme.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Theme: Use a red and white color scheme to match their physical menu board."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Page renders as a single-page layout (no required multi-page navigation)",
+        "Red/white theme is applied consistently across header, sections, and menu presentation",
+        "Layout is responsive and usable on mobile and desktop"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement a header section that displays the restaurant name “Mehfil Limra Paradise Restaurant” and includes the alternate name “Mehfil Mandi House” (e.g., as a subtitle or secondary label). Add a prominent “Call Now” button that links to tel:6305855373.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Name: Mehfil Limra Paradise Restaurant (also appears to go by \"Mehfil Mandi House\" on the exterior board).",
+          "Header: Include the restaurant name and a 'Call Now' button linking to '6305855373'."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Header shows primary name exactly as “Mehfil Limra Paradise Restaurant”",
+        "Alternate name “Mehfil Mandi House” is visible in the header area",
+        "“Call Now” button uses a tel: link (tel:6305855373) and is easily clickable on mobile"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Add a Location section that displays the address text: “Opp. Pillar No. 103, Attapur X Roads, Hyderabad”.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Location Section: Display the address 'Opp. Pillar No. 103, Attapur X Roads, Hyderabad'."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Location section is present on the page",
+        "Address text matches exactly: “Opp. Pillar No. 103, Attapur X Roads, Hyderabad”"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Digitize the provided menu items into a clean table or grid layout with columns for Item, Single price, and Full price. Use “--” where a Single/Full price is not provided. Include placeholders for additional items not enumerated by the user (as stand-in rows/cards without specific pricing).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Please digitize the following menu items into a clean HTML table or Grid view with prices (Single / Full):",
+          "Chicken Biryani: 100/- | 150/-",
+          "Chicken 65 Biryani: -- | 210/-",
+          "Veg Biryani: -- | 80/-",
+          "Egg Biryani: -- | 80/-",
+          "Chicken Family Pack: -- | 450/-",
+          "Chicken Jumbo Pack: -- | 600/-",
+          "Chicken Fried Rice: 70/- | 110/-",
+          "Chicken Noodles: 70/- | 110/-",
+          "Chicken 65: 120/- | 180/-",
+          "(Include placeholders for the rest of the items visible in the menu image)."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Menu section displays at least the 9 specified items with the exact prices and “--” where indicated",
+        "Menu shows Single and Full pricing fields/columns for each listed item",
+        "Additional placeholder entries are visible to represent other items not yet digitized",
+        "Menu layout remains readable on mobile (no horizontal overflow for typical phone widths)"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Generate and include basic restaurant branding imagery as static assets and display them on the page (e.g., logo badge and a subtle hero/banner graphic) while staying within the red/white theme.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Theme: Use a red and white color scheme to match their physical menu board."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Generated images exist under frontend/public/assets/generated and are referenced by the UI",
+        "At least one logo-like badge image is displayed near the header",
+        "At least one banner/hero-style image is displayed in the top section or as a section header background",
+        "Images visually match a red/white palette and do not introduce unrelated colors as dominant accents"
+      ]
+    }
+  ],
+  "constraints": [
+    "Use English for all user-facing text",
+    "Frontend must be implemented with the provided React + TypeScript + Tailwind + shadcn/ui template; do not modify files under frontend/src/components/ui or other immutable paths listed in SYSTEM_CONTEXT",
+    "No external website is required or assumed for the restaurant (do not add .com links unless provided)"
+  ],
+  "nonGoals": [
+    "Online ordering, payments, or delivery integrations (e.g., Swiggy/Zomato)",
+    "Admin panel/CMS for editing menu content",
+    "User accounts or authentication",
+    "Real-time features or chat"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Circular restaurant logo/badge in red and white with decorative border and simple text styling (mehfil-logo-badge.dim_512x512.png)",
+      "Wide hero/banner background with subtle red-and-white pattern or texture (mehfil-hero-banner.dim_1600x600.png)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

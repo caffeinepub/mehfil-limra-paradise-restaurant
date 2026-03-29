@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build a responsive single-page website for Mehfil Limra Paradise Restaurant (aka Mehfil Mandi House) featuring branding, contact CTA, location info, and a digitized menu with prices.",
+  "architectural_notes": [
+    "Single-page responsive restaurant website.",
+    "Include 'Call Now' button linking via tel:6305855373.",
+    "Use red and white color scheme to match physical menu board.",
+    "Menu displayed as HTML table or grid with Single/Full prices and placeholders for remaining items.",
+    "Location section must show: 'Opp. Pillar No. 103, Attapur X Roads, Hyderabad'."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Circular restaurant logo/badge in red and white with decorative border and simple text styling (mehfil-logo-badge.dim_512x512.png)\n- Wide hero/banner background with subtle red-and-white pattern or texture (mehfil-hero-banner.dim_1600x600.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-responsive-single-page-website-for-the-restaurant-with-a-consistent-red-and-white-visual-theme",
+      "title": "Create a responsive single-page website for the restaurant with a consistent red-and-white visual theme.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-header-section-that-displays-the-restaurant-name-mehfil-limra-paradise-restaurant-and-includes-the-alternate-name-mehfil-mandi-house-e-g-as-a-subtitle-or-secondary-label-add-a-prominent-call-now-button-that-links-to-tel-6305855373",
+      "title": "Implement a header section that displays the restaurant name “Mehfil Limra Paradise Restaurant” and includes the alternate name “Mehfil Mandi House” (e.g., as a subtitle or secondary label). Add a prominent “Call Now” button that links to tel:6305855373.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-location-section-that-displays-the-address-text-opp-pillar-no-103-attapur-x-roads-hyderabad",
+      "title": "Add a Location section that displays the address text: “Opp. Pillar No. 103, Attapur X Roads, Hyderabad”.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-digitize-the-provided-menu-items-into-a-clean-table-or-grid-layout-with-columns-for-item-single-price-and-full-price-use-where-a-single-full-price-is-not-provided-include-placeholders-for-additional-items-not-enumerated-by-the-user-as-stand-in-rows-cards-without-specific-pricing",
+      "title": "Digitize the provided menu items into a clean table or grid layout with columns for Item, Single price, and Full price. Use “--” where a Single/Full price is not provided. Include placeholders for additional items not enumerated by the user (as stand-in rows/cards without specific pricing).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-and-include-basic-restaurant-branding-imagery-as-static-assets-and-display-them-on-the-page-e-g-logo-badge-and-a-subtle-hero-banner-graphic-while-staying-within-the-red-white-theme",
+      "title": "Generate and include basic restaurant branding imagery as static assets and display them on the page (e.g., logo badge and a subtle hero/banner graphic) while staying within the red/white theme.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a responsive single-page restaurant website with red/white theme, header with restaurant name and 'Call Now' tel:6305855373 button, location section, and a digitized menu table/grid with Single/Full prices plus placeholders for remaining items from the menu image.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Mehfil Limra Paradise Restaurant",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

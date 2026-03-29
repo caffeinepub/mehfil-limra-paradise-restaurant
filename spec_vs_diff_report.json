@@ -1,0 +1,71 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-05T15:44:29.770Z",
+  "summary": "Most core UI sections are present (hero, sticky header with tel: CTA, location section with exact address text, and a menu grid with single/full prices). However, required generated image assets are only referenced (not shown as added), menu placeholders for non-enumerated items are not evident, and multiple unrequested external links/auth-related code were introduced.",
+  "missing_requirements": [
+    {
+      "id": "REQ-4",
+      "requirement": "Include placeholders for additional menu items not enumerated by the user (stand-in rows/cards without specific pricing).",
+      "reason": "The menu data shown contains specific additional items (e.g., Mutton Biryani, Prawns Biryani, Paneer 65) but there is no clear evidence of placeholder entries (e.g., \"Coming soon\" or blank/placeholder rows) representing not-yet-digitized items.",
+      "evidence": [
+        "frontend/src/components/MenuSection.tsx"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "requirement": "Generated branding images exist under frontend/public/assets/generated and are referenced by the UI.",
+      "reason": "UI references the required image paths, but the diff summary does not show the actual generated image files being added under frontend/public/assets/generated.",
+      "evidence": [
+        "frontend/src/components/HeaderSection.tsx",
+        "frontend/src/components/HeroSection.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "External 'Get Directions' link to Google Maps",
+      "reason": "BuildRequest states no external website is required/assumed and to not add .com links unless provided; a google.com link was added.",
+      "evidence": [
+        "frontend/src/components/HeaderSection.tsx"
+      ]
+    },
+    {
+      "description": "External attribution link to caffeine.ai in the footer",
+      "reason": "Not requested in the BuildRequest and introduces an external link.",
+      "evidence": [
+        "frontend/src/components/Footer.tsx"
+      ]
+    },
+    {
+      "description": "Internet Identity / authentication hooks and actor-query plumbing",
+      "reason": "User accounts/authentication are explicitly listed as non-goals, but authentication/identity-related hooks and actor management code were added.",
+      "evidence": [
+        "frontend/src/main.tsx",
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts"
+      ]
+    }
+  ],
+  "confidence": 0.72,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/HeaderSection.tsx",
+    "frontend/src/components/HeroSection.tsx",
+    "frontend/src/components/LocationSection.tsx",
+    "frontend/src/components/MenuSection.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}
